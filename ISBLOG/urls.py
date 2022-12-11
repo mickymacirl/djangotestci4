@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# A list of path() instances. Each path() instance takes four arguments, two required: route and view,
+# and two optional: kwargs, and name.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
