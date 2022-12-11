@@ -15,7 +15,7 @@
             body {
             font-family: "Roboto", sans-serif;
             font-size: 17px;
-            background-color: #fdfdfd;
+            background-color: #383838;
         }
         .shadow {
             box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
@@ -26,10 +26,11 @@
             border-color: #dc281e;
         }
         .masthead {
-            background: #3398E1;
+            background: #212629;
             height: auto;
             padding-bottom: 15px;
-            box-shadow: 0 16px 48px #E3E7EB;
+            padding-left: 15px;
+            box-shadow: 0 16px 48px #0e7ae6;
             padding-top: 10px;
         }
     </style>
@@ -37,7 +38,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">Django central</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Irish Cyber Security Blog</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,10 +49,10 @@
                             <a class="nav-link text-black font-weight-bold" href="#">About</a>
                         </li>
                         <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">Policy</a>
+                            <a class="nav-link text-black font-weight-bold" href="#">Join</a>
                         </li>
                         <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" href="#">Contact</a>
+                            <a class="nav-link text-black font-weight-bold" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -61,8 +62,36 @@
         <!-- Content Goes here -->
         {% endblock content %}
         <!-- Footer -->
-        <footer class="py-3 bg-grey">
-            <p class="m-0 text-dark text-center ">Copyright &copy; Django Central</p>
+        <footer class="py-3 bg-grey footer">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+              </div>
+              <ul class="social-icon">
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a></li>
+              </ul>
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+          
+              </ul>
+              <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
         </footer>
     </body>
 </html>
