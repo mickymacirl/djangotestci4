@@ -1,0 +1,30 @@
+<!-- post_form.html -->
+
+<h1>Update Post</h1>
+
+<form method="post" action="{% url 'update_post' post.pk %}">
+  {% csrf_token %}
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{ post.title }}" />
+  </div>
+  <div>
+    <label for="slug">Slug:</label>
+    <input type="text" id="slug" name="slug" value="{{ post.slug }}" />
+  </div>
+  <div>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content">{{ post.content }}</textarea>
+  </div>
+  <div>
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+      {% for key, value in STATUS %}
+        <option value="{{ key }}"{% if post.status == key %} selected{% endif %}>{{ value }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div>
+    <button type="submit">Save Changes</button>
+  </div>
+</form>
